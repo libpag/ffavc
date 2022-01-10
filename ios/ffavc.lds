@@ -1,0 +1,4 @@
+*[FFAVC*
+*_OBJC_CLASS_$_FFAVC*
+*_OBJC_METACLASS_$_FFAVC*
+*ffavc*

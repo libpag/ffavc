@@ -1,0 +1,62 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+#*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Gradle
+captures/
+build/
+
+
+# Android
+.idea
+.gradle
+.externalNativeBuild
+local.properties
+
+
+/third_party
+/DEPS.cache
+cmake-build-debug
+cmake-build-release
+/scripts/built
+node_modules
+Build/
+test/out/
+DerivedData/
+xcuserdata
+*.xcworkspace
+.DS_Store
+.temp
+Pods/
+
+Podfile.lock
+Adobe After Effects Auto-Save/
+.cxx
+
+/QTCMAKE.cfg
+.sync_deps.cmake
+/build.yml
