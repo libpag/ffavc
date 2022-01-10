@@ -4,19 +4,22 @@ OPTIONS="--disable-all --disable-everything --disable-debug --disable-autodetect
         --enable-avcodec --enable-decoder=h264"
 
 find_ndk() {
-  if [ -f "$NDK_HOME/ndk-build" ]; then
-    return
-  fi
+  for NDK in $NDK_HOME $NDK_PATH $ANDROID_NDK_HOME $ANDROID_NDK; do
+    if [ -f "$NDK/ndk-build" ]; then
+      echo $NDK
+      return
+    fi
+  done
   ANDROID_HOME=$HOME/Library/Android/sdk
   if [ -f "$ANDROID_HOME/ndk-bundle/ndk-build" ]; then
-    NDK_HOME=$ANDROID_HOME/ndk-bundle
+    echo $ANDROID_HOME/ndk-bundle
     return
   fi
 
   if [ -d "$ANDROID_HOME/ndk" ]; then
     for file in $ANDROID_HOME/ndk/*; do
       if [ -f "$file/ndk-build" ]; then
-        NDK_HOME=$file
+        echo $file
         return
       fi
     done
@@ -25,13 +28,14 @@ find_ndk() {
 
 build_arch() {
   ./configure --target-os=android --enable-cross-compile --cc=$CC --arch=$ARCH --cpu=${CPU} $OPTIONS \
-    --cross-prefix=${CROSS_PREFIX} --sysroot=${SYSROOT} --extra-cflags="-w" --prefix=$OUT_DIR/$ARCH
+    --cross-prefix=${CROSS_PREFIX} --sysroot=${SYSROOT} --extra-cflags="-w -fvisibility=hidden" \
+    --prefix=$OUT_DIR/$ARCH
   make -j12
   make install
   make clean
 }
 
-find_ndk
+NDK_HOME=$(find_ndk)
 if ! [ -d "$NDK_HOME" ]; then
   echo "Could not find the NDK_HOME!"
   exit 1

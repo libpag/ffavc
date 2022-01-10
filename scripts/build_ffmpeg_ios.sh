@@ -6,7 +6,8 @@ OPTIONS="--disable-all --disable-everything --disable-debug --disable-autodetect
 
 build_arch() {
   ./configure --target-os=darwin --enable-cross-compile --arch=$ARCH --cc="$CC" $OPTIONS \
-    --extra-cflags="-w $CFLAGS -arch $ARCH" --extra-ldflags="$CFLAGS -arch $ARCH" --prefix=$OUT_DIR/$ARCH
+    --extra-cflags="-w -fvisibility=hidden $CFLAGS -arch $ARCH" --extra-ldflags="$CFLAGS -arch $ARCH" \
+    --prefix=$OUT_DIR/$ARCH
   make -j12
   make install
   make clean
