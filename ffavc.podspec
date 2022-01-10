@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
                    'src/decoder/**/*.{h,cpp}',
                    'src/cocoa/**/*.{h,cpp,mm,m}'
 
-  s.public_header_files = 'src/platform/cocoa/*.h'
+  s.public_header_files = 'include/ffavc.h'
   s.libraries = ["c++"]
   s.compiler_flags = '-Wno-documentation'
   C_FLAGS = ["-Wall -Wextra -Weffc++ -pedantic -Werror=return-type"]
