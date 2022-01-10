@@ -37,9 +37,6 @@ build/
 .externalNativeBuild
 local.properties
 
-
-/third_party
-/DEPS.cache
 cmake-build-debug
 cmake-build-release
 /scripts/built
@@ -54,9 +51,4 @@ xcuserdata
 Pods/
 
 Podfile.lock
-Adobe After Effects Auto-Save/
 .cxx
-
-/QTCMAKE.cfg
-.sync_deps.cmake
-/build.yml
