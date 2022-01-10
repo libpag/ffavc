@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		821C6283DBB458DBA6B660C5 /* Pods_PAGViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E738D7BA6472CAF1D998D35E /* Pods_PAGViewer.framework */; };
+		F22F1798278C69EB0002B9C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F1797278C69EB0002B9C9 /* AppDelegate.m */; };
+		F22F179A278C69EB0002B9C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F22F1799278C69EB0002B9C9 /* Assets.xcassets */; };
+		F22F179D278C69EB0002B9C9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22F179B278C69EB0002B9C9 /* MainMenu.xib */; };
+		F22F179F278C69EB0002B9C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F22F179E278C69EB0002B9C9 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F22F17A6278C69EB0002B9C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F22F178B278C69EB0002B9C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F22F1792278C69EB0002B9C9;
+			remoteInfo = PAGViewer;
+		};
+		F22F17B0278C69EC0002B9C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F22F178B278C69EB0002B9C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F22F1792278C69EB0002B9C9;
+			remoteInfo = PAGViewer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		51493355819CD0B17CAA2128 /* Pods-PAGViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAGViewer.debug.xcconfig"; path = "Target Support Files/Pods-PAGViewer/Pods-PAGViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		E738D7BA6472CAF1D998D35E /* Pods_PAGViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PAGViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22F1793278C69EB0002B9C9 /* PAGViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PAGViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22F1796278C69EB0002B9C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F22F1797278C69EB0002B9C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F22F1799278C69EB0002B9C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F22F179C278C69EB0002B9C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F22F179E278C69EB0002B9C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F22F17A0278C69EB0002B9C9 /* PAGViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PAGViewer.entitlements; sourceTree = "<group>"; };
+		F22F17A5278C69EB0002B9C9 /* PAGViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PAGViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22F17AF278C69EC0002B9C9 /* PAGViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PAGViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F83A024BD33317C32978E57D /* Pods-PAGViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAGViewer.release.xcconfig"; path = "Target Support Files/Pods-PAGViewer/Pods-PAGViewer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F22F1790278C69EB0002B9C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821C6283DBB458DBA6B660C5 /* Pods_PAGViewer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22F17A2278C69EB0002B9C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22F17AC278C69EC0002B9C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17D72A2ADD59F343C50EA8A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E738D7BA6472CAF1D998D35E /* Pods_PAGViewer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9A7EE93CBA0730753B2CEAF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51493355819CD0B17CAA2128 /* Pods-PAGViewer.debug.xcconfig */,
+				F83A024BD33317C32978E57D /* Pods-PAGViewer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F22F178A278C69EB0002B9C9 = {
+			isa = PBXGroup;
+			children = (
+				F22F1795278C69EB0002B9C9 /* PAGViewer */,
+				F22F1794278C69EB0002B9C9 /* Products */,
+				E9A7EE93CBA0730753B2CEAF /* Pods */,
+				17D72A2ADD59F343C50EA8A8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F22F1794278C69EB0002B9C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F22F1793278C69EB0002B9C9 /* PAGViewer.app */,
+				F22F17A5278C69EB0002B9C9 /* PAGViewerTests.xctest */,
+				F22F17AF278C69EC0002B9C9 /* PAGViewerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F22F1795278C69EB0002B9C9 /* PAGViewer */ = {
+			isa = PBXGroup;
+			children = (
+				F22F1796278C69EB0002B9C9 /* AppDelegate.h */,
+				F22F1797278C69EB0002B9C9 /* AppDelegate.m */,
+				F22F1799278C69EB0002B9C9 /* Assets.xcassets */,
+				F22F179B278C69EB0002B9C9 /* MainMenu.xib */,
+				F22F179E278C69EB0002B9C9 /* main.m */,
+				F22F17A0278C69EB0002B9C9 /* PAGViewer.entitlements */,
+			);
+			path = PAGViewer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F22F1792278C69EB0002B9C9 /* PAGViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22F17B9278C69EC0002B9C9 /* Build configuration list for PBXNativeTarget "PAGViewer" */;
+			buildPhases = (
+				6D21CAD526B8A81B51691ADC /* [CP] Check Pods Manifest.lock */,
+				F22F178F278C69EB0002B9C9 /* Sources */,
+				F22F1790278C69EB0002B9C9 /* Frameworks */,
+				F22F1791278C69EB0002B9C9 /* Resources */,
+				F463BDC0E5B0D2FE14131E0B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PAGViewer;
+			productName = PAGViewer;
+			productReference = F22F1793278C69EB0002B9C9 /* PAGViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F22F17A4278C69EB0002B9C9 /* PAGViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22F17BC278C69EC0002B9C9 /* Build configuration list for PBXNativeTarget "PAGViewerTests" */;
+			buildPhases = (
+				F22F17A1278C69EB0002B9C9 /* Sources */,
+				F22F17A2278C69EB0002B9C9 /* Frameworks */,
+				F22F17A3278C69EB0002B9C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F22F17A7278C69EB0002B9C9 /* PBXTargetDependency */,
+			);
+			name = PAGViewerTests;
+			productName = PAGViewerTests;
+			productReference = F22F17A5278C69EB0002B9C9 /* PAGViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F22F17AE278C69EC0002B9C9 /* PAGViewerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22F17BF278C69EC0002B9C9 /* Build configuration list for PBXNativeTarget "PAGViewerUITests" */;
+			buildPhases = (
+				F22F17AB278C69EC0002B9C9 /* Sources */,
+				F22F17AC278C69EC0002B9C9 /* Frameworks */,
+				F22F17AD278C69EC0002B9C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F22F17B1278C69EC0002B9C9 /* PBXTargetDependency */,
+			);
+			name = PAGViewerUITests;
+			productName = PAGViewerUITests;
+			productReference = F22F17AF278C69EC0002B9C9 /* PAGViewerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F22F178B278C69EB0002B9C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F22F1792278C69EB0002B9C9 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F22F17A4278C69EB0002B9C9 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F22F1792278C69EB0002B9C9;
+					};
+					F22F17AE278C69EC0002B9C9 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F22F1792278C69EB0002B9C9;
+					};
+				};
+			};
+			buildConfigurationList = F22F178E278C69EB0002B9C9 /* Build configuration list for PBXProject "PAGViewer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F22F178A278C69EB0002B9C9;
+			productRefGroup = F22F1794278C69EB0002B9C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F22F1792278C69EB0002B9C9 /* PAGViewer */,
+				F22F17A4278C69EB0002B9C9 /* PAGViewerTests */,
+				F22F17AE278C69EC0002B9C9 /* PAGViewerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F22F1791278C69EB0002B9C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22F179A278C69EB0002B9C9 /* Assets.xcassets in Resources */,
+				F22F179D278C69EB0002B9C9 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22F17A3278C69EB0002B9C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22F17AD278C69EC0002B9C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6D21CAD526B8A81B51691ADC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PAGViewer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F463BDC0E5B0D2FE14131E0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PAGViewer/Pods-PAGViewer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PAGViewer/Pods-PAGViewer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PAGViewer/Pods-PAGViewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F22F178F278C69EB0002B9C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22F179F278C69EB0002B9C9 /* main.m in Sources */,
+				F22F1798278C69EB0002B9C9 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22F17A1278C69EB0002B9C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22F17AB278C69EC0002B9C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F22F17A7278C69EB0002B9C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F22F1792278C69EB0002B9C9 /* PAGViewer */;
+			targetProxy = F22F17A6278C69EB0002B9C9 /* PBXContainerItemProxy */;
+		};
+		F22F17B1278C69EC0002B9C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F22F1792278C69EB0002B9C9 /* PAGViewer */;
+			targetProxy = F22F17B0278C69EC0002B9C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F22F179B278C69EB0002B9C9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F22F179C278C69EB0002B9C9 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F22F17B7278C69EC0002B9C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F22F17B8278C69EC0002B9C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F22F17BA278C69EC0002B9C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51493355819CD0B17CAA2128 /* Pods-PAGViewer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PAGViewer/PAGViewer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36588GHG2N;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.pag.PAGViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		F22F17BB278C69EC0002B9C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F83A024BD33317C32978E57D /* Pods-PAGViewer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PAGViewer/PAGViewer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36588GHG2N;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.pag.PAGViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		F22F17BD278C69EC0002B9C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36588GHG2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.pag.PAGViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PAGViewer.app/Contents/MacOS/PAGViewer";
+			};
+			name = Debug;
+		};
+		F22F17BE278C69EC0002B9C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36588GHG2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.pag.PAGViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PAGViewer.app/Contents/MacOS/PAGViewer";
+			};
+			name = Release;
+		};
+		F22F17C0278C69EC0002B9C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36588GHG2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.pag.PAGViewerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = PAGViewer;
+			};
+			name = Debug;
+		};
+		F22F17C1278C69EC0002B9C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 36588GHG2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.pag.PAGViewerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = PAGViewer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F22F178E278C69EB0002B9C9 /* Build configuration list for PBXProject "PAGViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22F17B7278C69EC0002B9C9 /* Debug */,
+				F22F17B8278C69EC0002B9C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22F17B9278C69EC0002B9C9 /* Build configuration list for PBXNativeTarget "PAGViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22F17BA278C69EC0002B9C9 /* Debug */,
+				F22F17BB278C69EC0002B9C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22F17BC278C69EC0002B9C9 /* Build configuration list for PBXNativeTarget "PAGViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22F17BD278C69EC0002B9C9 /* Debug */,
+				F22F17BE278C69EC0002B9C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22F17BF278C69EC0002B9C9 /* Build configuration list for PBXNativeTarget "PAGViewerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22F17C0278C69EC0002B9C9 /* Debug */,
+				F22F17C1278C69EC0002B9C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F22F178B278C69EB0002B9C9 /* Project object */;
+}
