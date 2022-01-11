@@ -28,6 +28,8 @@ ARCH="arm64"
 build_arch
 
 # build armv7
+# compiling armv7 with asm support will cause an 'text-relocation' error during linking.
+OPTIONS="$OPTIONS --disable-asm"
 ARCH="armv7"
 build_arch
 
