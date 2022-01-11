@@ -45,6 +45,7 @@ Build/
 test/out/
 DerivedData/
 xcuserdata
+xcshareddata
 *.xcworkspace
 .DS_Store
 .temp
