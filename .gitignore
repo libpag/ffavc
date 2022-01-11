@@ -53,3 +53,4 @@ Pods/
 Podfile.lock
 .cxx
 /vendor/ffmpeg/
+/out
