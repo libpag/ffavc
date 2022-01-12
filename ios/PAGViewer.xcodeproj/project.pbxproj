@@ -15,20 +15,20 @@
 		27201CE7224CD78A00F21604 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27201CE6224CD78A00F21604 /* main.m */; };
 		27201D6F224CD8E800F21604 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27201D6D224CD8E800F21604 /* MainView.m */; };
 		2793EDA72251A0540091E1CB /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2793EDA62251A0530091E1CB /* BackgroundView.m */; };
+		4DC1F0BA278E75B1009DAD86 /* libpag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC1F0B8278E7585009DAD86 /* libpag.framework */; };
+		4DC1F0BB278E75B1009DAD86 /* libpag.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC1F0B8278E7585009DAD86 /* libpag.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B575942054742F303464331 /* Pods_PAGViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C48CB188705502FED64604C /* Pods_PAGViewer.framework */; };
 		F205A7FE270D60090098F370 /* particle_video.pag in Resources */ = {isa = PBXBuildFile; fileRef = F205A7FD270D60090098F370 /* particle_video.pag */; };
-		F205A7FF270D64940098F370 /* libpag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F205A7FA270D5F920098F370 /* libpag.framework */; };
-		F205A800270D64940098F370 /* libpag.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F205A7FA270D5F920098F370 /* libpag.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F205A801270D64940098F370 /* Embed Frameworks */ = {
+		4DC1F0BC278E75B1009DAD86 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F205A800270D64940098F370 /* libpag.framework in Embed Frameworks */,
+				4DC1F0BB278E75B1009DAD86 /* libpag.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +50,7 @@
 		27201D6E224CD8E800F21604 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		2793EDA52251A0530091E1CB /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
 		2793EDA62251A0530091E1CB /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		4DC1F0B8278E7585009DAD86 /* libpag.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libpag.framework; sourceTree = "<group>"; };
 		8572B7503EF1B709DB39060F /* Pods-PAGViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAGViewer.release.xcconfig"; path = "Target Support Files/Pods-PAGViewer/Pods-PAGViewer.release.xcconfig"; sourceTree = "<group>"; };
 		9C48CB188705502FED64604C /* Pods_PAGViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PAGViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD64DBBC453D4288F1C4F5FD /* Pods-PAGViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAGViewer.debug.xcconfig"; path = "Target Support Files/Pods-PAGViewer/Pods-PAGViewer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,7 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B575942054742F303464331 /* Pods_PAGViewer.framework in Frameworks */,
-				F205A7FF270D64940098F370 /* libpag.framework in Frameworks */,
+				4DC1F0BA278E75B1009DAD86 /* libpag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +92,7 @@
 		27201CD6224CD78900F21604 /* PAGViewer */ = {
 			isa = PBXGroup;
 			children = (
+				4DC1F0B8278E7585009DAD86 /* libpag.framework */,
 				27201CD7224CD78900F21604 /* AppDelegate.h */,
 				27201CD8224CD78900F21604 /* AppDelegate.m */,
 				27201D6E224CD8E800F21604 /* MainView.h */,
@@ -147,7 +149,7 @@
 				27201CD1224CD78900F21604 /* Frameworks */,
 				27201CD2224CD78900F21604 /* Resources */,
 				A2CC9E5BCD37857A0A5544FF /* [CP] Embed Pods Frameworks */,
-				F205A801270D64940098F370 /* Embed Frameworks */,
+				4DC1F0BC278E75B1009DAD86 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,7 +166,7 @@
 		27201CCC224CD78900F21604 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = paranoid2006;
 				TargetAttributes = {
 					27201CD3224CD78900F21604 = {
@@ -307,6 +309,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -332,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -366,6 +369,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -385,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -400,7 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 36588GHG2N;
+				DEVELOPMENT_TEAM = A25BQKLXTS;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -408,7 +412,7 @@
 					"$(PROJECT_DIR)/PAGViewer",
 				);
 				INFOPLIST_FILE = PAGViewer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,6 +424,7 @@
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				SYSTEM_HEADER_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 				WARNING_CFLAGS = (
 					"-Wno-documentation",
 					"-Wno-unused-variable",
@@ -434,7 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 36588GHG2N;
+				DEVELOPMENT_TEAM = A25BQKLXTS;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -442,7 +447,7 @@
 					"$(PROJECT_DIR)/PAGViewer",
 				);
 				INFOPLIST_FILE = PAGViewer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +459,7 @@
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				SYSTEM_HEADER_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 				WARNING_CFLAGS = (
 					"-Wno-documentation",
 					"-Wno-unused-variable",
