@@ -47,8 +47,6 @@ esac
 make_dir $OUT_DIR
 
 build_arch() {
-  echo "--win---ARCH:$ARCH"
-
   ./configure --toolchain=msvc --enable-cross-compile $OPTIONS \
     --prefix=$OUT_DIR/$ARCH
   make -j12
