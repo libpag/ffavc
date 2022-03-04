@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
   s.compiler_flags = '-Wno-documentation'
   C_FLAGS = ["-Wall -Wextra -Weffc++ -pedantic -Werror=return-type"]
   s.xcconfig = {"HEADER_SEARCH_PATHS" => "#{PAG_ROOT}/src #{PAG_ROOT}/include #{PAG_ROOT}/vendor/ffmpeg/include #{PAG_ROOT}/vendor/libpag/include","OTHER_CFLAGS" => C_FLAGS.join(" "),"OTHER_LDFLAGS" => "-w","EXPORTED_SYMBOLS_FILE" => "#{PAG_ROOT}/ios/ffavc.lds"}
-  s.ios.vendored_libraries  = 'vendor/ffmpeg/ios/*.a'
-  s.osx.vendored_libraries = 'vendor/ffmpeg/mac/*.a'
+  s.vendored_frameworks  = 'vendor/ffmpeg/apple/libavcodec.xcframework', 'vendor/ffmpeg/apple/libavutil.xcframework'
 
 end

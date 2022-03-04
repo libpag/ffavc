@@ -30,12 +30,5 @@ CFLAGS="-mmacosx-version-min=$MACOSX_DEPLOYMENT_TARGET -fembed-bitcode"
 ARCH="arm64"
 build_arch
 
-# merge to a fat library
-mkdir -p $OUT_DIR/lib
-lipo -create $OUT_DIR/arm64/lib/libavcodec.a $OUT_DIR/x86_64/lib/libavcodec.a -o $OUT_DIR/lib/libavcodec.a
-lipo -create $OUT_DIR/arm64/lib/libavutil.a $OUT_DIR/x86_64/lib/libavutil.a -o $OUT_DIR/lib/libavutil.a
-
 mkdir -p $OUT_DIR/include
 cp -r $OUT_DIR/x86_64/include/. $OUT_DIR/include
-rm -rf $OUT_DIR/arm64
-rm -rf $OUT_DIR/x86_64

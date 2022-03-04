@@ -12,7 +12,11 @@ if (EMSCRIPTEN)
     set(ARCH wasm)
 elseif (ANDROID OR IOS)
     if (CMAKE_SYSTEM_PROCESSOR STREQUAL "aarch64")
-        set(ARCH arm64)
+        if (SDK_NAME STREQUAL iphonesimulator)
+            set(ARCH arm64-simulator)
+        else ()
+            set(ARCH arm64)
+        endif ()
     elseif (CMAKE_SYSTEM_PROCESSOR STREQUAL "x86_64")
         set(ARCH x64)
     else ()
@@ -48,11 +52,6 @@ elseif (CMAKE_HOST_SYSTEM_NAME MATCHES "Linux")
     set(PLATFORM linux)
 endif ()
 
-if (IOS OR MACOS)
-    set(LIBRARY_ENTRY ${PLATFORM})
-else ()
-    set(LIBRARY_ENTRY ${PLATFORM}/${ARCH})
-endif ()
 
 # Sets the default build type to release.
 if (NOT CMAKE_BUILD_TYPE)
@@ -80,7 +79,7 @@ set(FFAVC_FILES src/decoder/FFAVCDecoder.cpp)
 
 add_compile_options(-fvisibility=hidden)
 
-file(GLOB FFMPEG_FILES vendor/ffmpeg/${LIBRARY_ENTRY}/*${CMAKE_STATIC_LIBRARY_SUFFIX})
+file(GLOB FFMPEG_FILES vendor/ffmpeg/${PLATFORM}/${ARCH}/*${CMAKE_STATIC_LIBRARY_SUFFIX})
 list(APPEND FFAVC_VENDOR_LIBS ${FFMPEG_FILES})
 
 if (APPLE)
