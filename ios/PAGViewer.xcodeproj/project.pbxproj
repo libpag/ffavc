@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,20 +15,20 @@
 		27201CE7224CD78A00F21604 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27201CE6224CD78A00F21604 /* main.m */; };
 		27201D6F224CD8E800F21604 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27201D6D224CD8E800F21604 /* MainView.m */; };
 		2793EDA72251A0540091E1CB /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2793EDA62251A0530091E1CB /* BackgroundView.m */; };
-		4DC1F0BA278E75B1009DAD86 /* libpag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC1F0B8278E7585009DAD86 /* libpag.framework */; };
-		4DC1F0BB278E75B1009DAD86 /* libpag.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC1F0B8278E7585009DAD86 /* libpag.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		689B55C827D35FEF001F8D04 /* libpag.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689B55C727D35FEF001F8D04 /* libpag.xcframework */; };
+		689B55C927D35FEF001F8D04 /* libpag.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 689B55C727D35FEF001F8D04 /* libpag.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B575942054742F303464331 /* Pods_PAGViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C48CB188705502FED64604C /* Pods_PAGViewer.framework */; };
 		F205A7FE270D60090098F370 /* particle_video.pag in Resources */ = {isa = PBXBuildFile; fileRef = F205A7FD270D60090098F370 /* particle_video.pag */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4DC1F0BC278E75B1009DAD86 /* Embed Frameworks */ = {
+		689B55CA27D35FEF001F8D04 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4DC1F0BB278E75B1009DAD86 /* libpag.framework in Embed Frameworks */,
+				689B55C927D35FEF001F8D04 /* libpag.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +51,9 @@
 		2793EDA52251A0530091E1CB /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
 		2793EDA62251A0530091E1CB /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
 		4DC1F0B8278E7585009DAD86 /* libpag.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libpag.framework; sourceTree = "<group>"; };
+		689B55C127D350B2001F8D04 /* libavcodec.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libavcodec.xcframework; path = ../vendor/ffmpeg/apple/libavcodec.xcframework; sourceTree = "<group>"; };
+		689B55C227D350B2001F8D04 /* libavutil.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libavutil.xcframework; path = ../vendor/ffmpeg/apple/libavutil.xcframework; sourceTree = "<group>"; };
+		689B55C727D35FEF001F8D04 /* libpag.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libpag.xcframework; path = PAGViewer/libpag.xcframework; sourceTree = "<group>"; };
 		8572B7503EF1B709DB39060F /* Pods-PAGViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAGViewer.release.xcconfig"; path = "Target Support Files/Pods-PAGViewer/Pods-PAGViewer.release.xcconfig"; sourceTree = "<group>"; };
 		9C48CB188705502FED64604C /* Pods_PAGViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PAGViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD64DBBC453D4288F1C4F5FD /* Pods-PAGViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAGViewer.debug.xcconfig"; path = "Target Support Files/Pods-PAGViewer/Pods-PAGViewer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,8 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				689B55C827D35FEF001F8D04 /* libpag.xcframework in Frameworks */,
 				6B575942054742F303464331 /* Pods_PAGViewer.framework in Frameworks */,
-				4DC1F0BA278E75B1009DAD86 /* libpag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +117,9 @@
 		27201D5E224CD89500F21604 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				689B55C727D35FEF001F8D04 /* libpag.xcframework */,
+				689B55C127D350B2001F8D04 /* libavcodec.xcframework */,
+				689B55C227D350B2001F8D04 /* libavutil.xcframework */,
 				F205A7FA270D5F920098F370 /* libpag.framework */,
 				9C48CB188705502FED64604C /* Pods_PAGViewer.framework */,
 			);
@@ -149,7 +155,7 @@
 				27201CD1224CD78900F21604 /* Frameworks */,
 				27201CD2224CD78900F21604 /* Resources */,
 				A2CC9E5BCD37857A0A5544FF /* [CP] Embed Pods Frameworks */,
-				4DC1F0BC278E75B1009DAD86 /* Embed Frameworks */,
+				689B55CA27D35FEF001F8D04 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -412,7 +418,7 @@
 					"$(PROJECT_DIR)/PAGViewer",
 				);
 				INFOPLIST_FILE = PAGViewer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,7 +453,7 @@
 					"$(PROJECT_DIR)/PAGViewer",
 				);
 				INFOPLIST_FILE = PAGViewer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
