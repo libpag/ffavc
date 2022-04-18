@@ -37,8 +37,7 @@ build/
 .externalNativeBuild
 local.properties
 
-cmake-build-debug
-cmake-build-release
+cmake-build-*
 /scripts/built
 node_modules
 Build/
