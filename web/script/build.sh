@@ -1,10 +1,10 @@
 #!/bin/bash -e
 
-SOURCE_DIR=..
-BUILD_DIR=../build
+SOURCE_DIR=../..
+BUILD_DIR=../../build
 
-if [ ! -d "./wasm" ]; then
-  mkdir ./wasm
+if [ ! -d "../src/wasm" ]; then
+  mkdir ../src/wasm
 fi
 
 RELEASE_CONF="-Oz -s"
@@ -25,7 +25,7 @@ emcc $RELEASE_CONF -std=c++17 \
   -I$SOURCE_DIR/vendor/libpag/include/ \
   $SOURCE_DIR/vendor/ffmpeg/web/wasm/*.a \
   $BUILD_DIR/libffavc.a \
-  src/ffavc_wasm_bindings.cpp \
+  ../src/ffavc_wasm_bindings.cpp \
   --no-entry \
   --bind \
   -s WASM=1 \
@@ -37,4 +37,4 @@ emcc $RELEASE_CONF -std=c++17 \
   -s ENVIRONMENT="web" \
   -s EXPORT_ES6=1 \
   -s USE_ES6_IMPORT_META=0 \
-  -o ./wasm/ffavc.js
+  -o ../src/wasm/ffavc.js

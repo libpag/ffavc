@@ -1,0 +1,2 @@
+src/wasm
+src/ffavc_wasm_bindings.cpp

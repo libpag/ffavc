@@ -43,13 +43,12 @@ EMSCRIPTEN_BINDINGS(ffavc) {
                     return val::null();
                   }
                   auto dataArray = val::array();
-                  dataArray.call<void>("push", reinterpret_cast<intptr_t>(buffer->data[0]));
-                  dataArray.call<void>("push", reinterpret_cast<intptr_t>(buffer->data[1]));
-                  dataArray.call<void>("push", reinterpret_cast<intptr_t>(buffer->data[2]));
+                  dataArray.call<void>("push", reinterpret_cast<intptr_t>(buffer->data[0]),
+                                       reinterpret_cast<intptr_t>(buffer->data[1]),
+                                       reinterpret_cast<intptr_t>(buffer->data[2]));
                   auto lineSizeArray = val::array();
-                  lineSizeArray.call<void>("push", buffer->lineSize[0]);
-                  lineSizeArray.call<void>("push", buffer->lineSize[1]);
-                  lineSizeArray.call<void>("push", buffer->lineSize[2]);
+                  lineSizeArray.call<void>("push", buffer->lineSize[0], buffer->lineSize[1],
+                                           buffer->lineSize[2]);
                   auto ret = val::object();
                   ret.set("data", dataArray);
                   ret.set("lineSize", lineSizeArray);
