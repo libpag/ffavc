@@ -2,7 +2,11 @@ cmake_minimum_required(VERSION 3.1)
 project(ffavc)
 
 # Options for building ffavc
-option(FFAVC_BUILD_STATIC "Build static lib" OFF)
+if (EMSCRIPTEN)
+    option(FFAVC_BUILD_STATIC "Build static lib" ON)
+else ()
+    option(FFAVC_BUILD_STATIC "Build static lib" OFF)
+endif ()
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

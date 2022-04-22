@@ -81,6 +81,11 @@ if [[ $(uname) == 'Darwin' ]]; then
   make_dir $OUT_DIR/android/arm64
   cp -r $SOURCE_DIR/out/android/arm64/lib/*.a $OUT_DIR/android/arm64
 
+  # build web
+  ../../scripts/build_ffmpeg_web.sh
+  make_dir $OUT_DIR/web/wasm
+  cp -r $SOURCE_DIR/out/web/wasm/lib/*.a $OUT_DIR/web/wasm
+
 elif [[ $(uname) == 'Linux' ]]; then
   cd $SOURCE_DIR
   # build linux
