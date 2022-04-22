@@ -51,7 +51,7 @@ export class FFAVCDecoder {
     return res;
   }
 
-  public onSendBytes(bytes: Uint8Array, timestamp: number): number {
+  public onSendBytes(bytes: Uint8Array, timestamp: number): DecoderResult {
     const length = bytes.byteLength * bytes.BYTES_PER_ELEMENT;
     const dataPtr = FFAVCDecoder.module._malloc(length);
     const dataOnFFAVC = new Uint8Array(FFAVCDecoder.module.HEAP8.buffer, dataPtr, length);
@@ -61,11 +61,11 @@ export class FFAVCDecoder {
     return res;
   }
 
-  public onDecodeFrame(): number {
+  public onDecodeFrame(): DecoderResult {
     return this.wasmIns._onDecodeFrame().value;
   }
 
-  public onEndOfStream(): number {
+  public onEndOfStream(): DecoderResult {
     return this.wasmIns._onEndOfStream().value;
   }
 
