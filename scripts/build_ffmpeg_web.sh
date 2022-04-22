@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 OUT_DIR=out/web
-OPTIONS="--disable-all --disable-everything --disable-debug --disable-autodetect --enable-small --enable-avcodec --enable-decoder=h264"
+OPTIONS="--disable-all --disable-everything --disable-debug --disable-autodetect --enable-small --enable-avcodec --enable-decoder=h264 --disable-pthreads"
 
 rm -rf $OUT_DIR
 

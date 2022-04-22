@@ -2,6 +2,7 @@
 
 import { FFAVCDecoder } from './ffavc-decoder';
 import { FFAVCDecoderFactory } from './ffavc-decoder-factory';
+import { FFAVC } from './types';
 import createFFAVC from './wasm/ffavc';
 
 export interface moduleOption {
@@ -9,12 +10,6 @@ export interface moduleOption {
    * Link to wasm file.
    */
   locateFile?: (file: string) => string;
-}
-
-export interface FFAVC extends EmscriptenModule {
-  _FFAVCDecoder: any;
-  FFAVCDecoderFactory: typeof FFAVCDecoderFactory;
-  FFAVCDecoder: typeof FFAVCDecoder;
 }
 
 export const FFAVCInit = (moduleOption: moduleOption = {}): Promise<FFAVC> =>

@@ -36,6 +36,20 @@ msys2_shell.cmd -mingw32 -use-full-path (-mingw64 for 64-bit)
 build_ffmpeg.sh
 ```
 
+### Web platform
+
+1. Just go the root directory of ffavc project, run:
+
+``` bash
+build_ffmpeg.sh
+```
+
+2. Go the root directory of web/script directory, run:
+
+``` bash
+build.sh
+```
+
 ### Other platforms
 
 Just go the root directory of ffavc project, run:

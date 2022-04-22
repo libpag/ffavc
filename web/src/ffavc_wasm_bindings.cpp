@@ -26,13 +26,27 @@ using namespace ffavc;
 
 EMSCRIPTEN_BINDINGS(ffavc) {
   class_<FFAVCDecoder>("_FFAVCDecoder")
-      .smart_ptr<std::shared_ptr<FFAVCDecoder>>("_FFAVCDecoder")
-      .function("_onConfigure", &FFAVCDecoder::onConfigure)
-      .function("_onSendBytes",
-                optional_override([](FFAVCDecoder& decoder, intptr_t bytes, int length, int frame) {
-                  return decoder.onSendBytes(reinterpret_cast<uint8_t*>(bytes),
-                                             static_cast<size_t>(length),
-                                             static_cast<int64_t>(frame));
+      .smart_ptr_constructor("_FFAVCDecoder", &std::make_shared<FFAVCDecoder>)
+      .function("_onConfigure", optional_override([](FFAVCDecoder& decoder, val headers,
+                                                     std::string mimeType, int width, int height) {
+                  auto length = headers["length"].as<size_t>();
+                  std::vector<HeaderData> headersVector;
+                  for (size_t i = 0; i < length; ++i) {
+                    auto buffer = headers[i];
+                    if (!buffer.as<bool>()) {
+                      return false;
+                    }
+                    HeaderData data;
+                    data.data = reinterpret_cast<uint8_t*>(buffer["byteOffset"].as<uintptr_t>());
+                    data.length = buffer["length"].as<size_t>();
+                    headersVector.push_back(data);
+                  }
+                  return decoder.onConfigure(headersVector, mimeType, width, height);
+                }))
+      .function("_onSendBytes", optional_override([](FFAVCDecoder& decoder, val buffer, int frame) {
+                  return decoder.onSendBytes(
+                      reinterpret_cast<uint8_t*>(buffer["byteOffset"].as<uintptr_t>()),
+                      buffer["length"].as<size_t>(), static_cast<int64_t>(frame));
                 }))
       .function("_onDecodeFrame", &FFAVCDecoder::onDecodeFrame)
       .function("_onEndOfStream", &FFAVCDecoder::onEndOfStream)
@@ -59,15 +73,4 @@ EMSCRIPTEN_BINDINGS(ffavc) {
       .value("Success", DecoderResult::Success)
       .value("TryAgainLater", DecoderResult::TryAgainLater)
       .value("Error", DecoderResult::Error);
-
-  value_object<HeaderData>("HeaderData")
-      .field("data", optional_override([](const HeaderData& header) {
-               return reinterpret_cast<intptr_t>(header.data);
-             }),
-             optional_override([](HeaderData& header, intptr_t value) {
-               header.data = reinterpret_cast<uint8_t*>(value);
-             }))
-      .field("length", &HeaderData::length);
-
-  register_vector<HeaderData>("VectorHeaderData");
 }

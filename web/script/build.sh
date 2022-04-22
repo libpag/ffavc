@@ -2,6 +2,9 @@
 
 SOURCE_DIR=../..
 BUILD_DIR=../../build
+BUILD_TS="npm run build"
+
+echo "-----begin-----"
 
 if [ ! -d "../src/wasm" ]; then
   mkdir ../src/wasm
@@ -11,7 +14,7 @@ RELEASE_CONF="-Oz -s"
 CMAKE_BUILD_TYPE=Relese
 if [[ $@ == *debug* ]]; then
   CMAKE_BUILD_TYPE=Debug
-  RELEASE_CONF="-O0 -g3 -s SAFE_HEAP=1"
+  RELEASE_CONF="-O0 -g3"
   BUILD_TS=""
 fi
 
@@ -38,3 +41,13 @@ emcc $RELEASE_CONF -std=c++17 \
   -s EXPORT_ES6=1 \
   -s USE_ES6_IMPORT_META=0 \
   -o ../src/wasm/ffavc.js
+
+if [ ! -d "../lib" ]; then
+  mkdir ../lib
+fi
+
+cp -f ../src/wasm/ffavc.wasm ../lib
+
+$BUILD_TS
+
+echo "-----end-----"

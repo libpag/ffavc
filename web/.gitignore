@@ -3,3 +3,6 @@ wasm
 package-lock.json
 lib
 types
+demo/*.js
+demo/*.map
+demo/*.wasm
