@@ -30,7 +30,7 @@ pacman -S make gcc diffutils mingw-w64-{i686,x86_64}-pkg-config mingw-w64-i686-n
 msys2_shell.cmd -mingw32 -use-full-path (-mingw64 for 64-bit)
 ```
 
-7. Finally, go the root directory of ffavc project, run:
+7. Finally, go to the root directory of ffavc project, run:
 
 ```
 build_ffmpeg.sh
@@ -38,13 +38,13 @@ build_ffmpeg.sh
 
 ### Web platform
 
-1. Just go the root directory of ffavc project, run:
+1. Go to the root directory of ffavc project, run:
 
 ``` bash
 build_ffmpeg.sh
 ```
 
-2. Go the root directory of web/script directory, run:
+2. Go to the root directory of web/script directory, run:
 
 ``` bash
 build.sh
@@ -52,7 +52,7 @@ build.sh
 
 ### Other platforms
 
-Just go the root directory of ffavc project, run:
+Go to the root directory of ffavc project, run:
 
 ```
 build_ffmpeg.sh
