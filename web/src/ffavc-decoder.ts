@@ -73,17 +73,22 @@ export class FFAVCDecoder {
     this.wasmIns._onFlush();
   }
 
-  public onRenderFrame(): YUVBuffer {
+  public onRenderFrame(): YUVBuffer | null {
     // Free last frame.
     if (this.buffer.data.length > 0) {
       this.buffer.data.forEach((data) => {
         this.pag._free(data);
       });
+      this.buffer = { data: [], lineSize: [] };
     }
     const buffer = this.wasmIns._onRenderFrame() as YUVBuffer;
     // Copy data from FFAVCModule to PAGModule
     for (let index = 0; index < YUV_BUFFER_LENGTH; index++) {
-      const length = buffer.lineSize[index] * this.height;
+      let length = buffer.lineSize[index] * this.height;
+      if (FFAVCDecoder.module.HEAP8.buffer.byteLength - buffer.data[index] < length) {
+        console.error('RangeError: invalid array length! YUV buffer out of memory!');
+        return null;
+      }
       const dataOnFFAVC = new Uint8Array(FFAVCDecoder.module.HEAP8.buffer, buffer.data[index], length);
       const dataPtr = this.pag._malloc(length);
       const dataOnPAG = new Uint8Array(this.pag.HEAP8.buffer, dataPtr, length);

@@ -1,6 +1,6 @@
 {
   "name": "ffavc",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A video decoder built on ffmpeg",
   "main": "lib/ffavc.cjs.js",
   "module": "lib/ffavc.esm.js",
