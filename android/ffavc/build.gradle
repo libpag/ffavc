@@ -1,17 +1,15 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 33
+    buildToolsVersion '33.0.2'
     ndkVersion "19.2.5345600"
 
     defaultConfig {
-        minSdkVersion 18
-        targetSdkVersion 28
+        minSdkVersion 19
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         externalNativeBuild {
             cmake {
@@ -20,13 +18,23 @@ android {
         }
 
         ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a"
+            if (project.hasProperty("arm64-only")) {
+                abiFilters.add("arm64-v8a")
+            } else {
+                abiFilters.add("armeabi-v7a")
+                abiFilters.add("arm64-v8a")
+                abiFilters.add("x86_64")
+            }
         }
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -34,8 +42,11 @@ android {
     externalNativeBuild {
         cmake {
             path '../../CMakeLists.txt'
+            version = "3.22.1"
         }
     }
+
+    namespace 'org.ffavc'
 }
 
 dependencies {
@@ -47,45 +58,44 @@ dependencies {
 }
 
 project.afterEvaluate {
-    // 如果使用自动拷贝功能，需要保证NDK是16，否则会生成没有经过strip的包
-    transformNativeLibsWithMergeJniLibsForRelease.doLast {
+    mergeReleaseNativeLibs.doLast {
         delete {
-            delete 'build/intermediates/transforms/mergeJniLibs/release/0/lib/armeabi'
+            delete project.getBuildDir().path + '/intermediates/merged_native_libs/release/out/lib/armeabi'
         }
         copy {
-            from 'build/intermediates/transforms/mergeJniLibs/release/0/lib/armeabi-v7a'
-            into 'build/intermediates/transforms/mergeJniLibs/release/0/lib/armeabi'
+            from project.getBuildDir().path + '/intermediates/merged_native_libs/release/out/lib/armeabi-v7a'
+            into project.getBuildDir().path + '/intermediates/merged_native_libs/release/out/lib/armeabi'
             include '*.so'
         }
     }
-    transformNativeLibsWithStripDebugSymbolForRelease.doLast {
+    stripReleaseDebugSymbols.doLast {
         delete {
-            delete 'build/intermediates/transforms/stripDebugSymbol/release/0/lib/armeabi'
+            delete project.getBuildDir().path + '/intermediates/stripped_native_libs/release/out/lib/armeabi'
         }
         copy {
-            from 'build/intermediates/transforms/stripDebugSymbol/release/0/lib/armeabi-v7a'
-            into 'build/intermediates/transforms/stripDebugSymbol/release/0/lib/armeabi'
+            from project.getBuildDir().path + '/intermediates/stripped_native_libs/release/out/lib/armeabi-v7a'
+            into project.getBuildDir().path + '/intermediates/stripped_native_libs/release/out/lib/armeabi'
             include '*.so'
         }
     }
     // 此处为了方便debug，保留debug版本armeabi的拷贝，方便源码接入时候的调试
-    transformNativeLibsWithMergeJniLibsForDebug.doLast {
+    mergeDebugNativeLibs.doLast {
         delete {
-            delete 'build/intermediates/transforms/mergeJniLibs/debug/0/lib/armeabi'
+            delete project.getBuildDir().path + '/intermediates/merged_native_libs/debug/out/lib/armeabi'
         }
         copy {
-            from 'build/intermediates/transforms/mergeJniLibs/debug/0/lib/armeabi-v7a'
-            into 'build/intermediates/transforms/mergeJniLibs/debug/0/lib/armeabi'
+            from project.getBuildDir().path + '/intermediates/merged_native_libs/debug/out/lib/armeabi-v7a'
+            into project.getBuildDir().path + '/intermediates/merged_native_libs/debug/out/lib/armeabi'
             include '*.so'
         }
     }
-    transformNativeLibsWithStripDebugSymbolForDebug.doLast {
+    stripDebugDebugSymbols.doLast {
         delete {
-            delete 'build/intermediates/transforms/stripDebugSymbol/debug/0/lib/armeabi'
+            delete project.getBuildDir().path + '/intermediates/stripped_native_libs/debug/out/lib/armeabi'
         }
         copy {
-            from 'build/intermediates/transforms/stripDebugSymbol/debug/0/lib/armeabi-v7a'
-            into 'build/intermediates/transforms/stripDebugSymbol/debug/0/lib/armeabi'
+            from project.getBuildDir().path + '/intermediates/stripped_native_libs/debug/out/lib/armeabi-v7a'
+            into project.getBuildDir().path + '/intermediates/stripped_native_libs/debug/out/lib/armeabi'
             include '*.so'
         }
     }

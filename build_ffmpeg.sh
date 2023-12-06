@@ -80,6 +80,8 @@ if [[ $(uname) == 'Darwin' ]]; then
   cp -r $SOURCE_DIR/out/android/arm/lib/*.a $OUT_DIR/android/arm
   make_dir $OUT_DIR/android/arm64
   cp -r $SOURCE_DIR/out/android/arm64/lib/*.a $OUT_DIR/android/arm64
+  make_dir $OUT_DIR/android/x64
+  cp -r $SOURCE_DIR/out/android/x86_64/lib/*.a $OUT_DIR/android/x64
 
   # build web
   ../../scripts/build_ffmpeg_web.sh

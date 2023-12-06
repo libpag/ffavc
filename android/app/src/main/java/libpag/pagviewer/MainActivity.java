@@ -1,13 +1,14 @@
 package libpag.pagviewer;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
 import org.ffavc.DecoderFactory;
 import org.libpag.PAGFile;
 import org.libpag.PAGView;
 import org.libpag.VideoDecoder;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         final PAGView pagView = (PAGView) findViewById(R.id.pagView);
         PAGFile pagFile = PAGFile.Load(getAssets(), "particle_video.pag");
         pagView.setRepeatCount(-1);
-        pagView.setFile(pagFile);
+        pagView.setComposition(pagFile);
         pagView.play();
     }
 }
