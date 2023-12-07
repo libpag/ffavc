@@ -101,7 +101,9 @@ elseif (ANDROID)
     list(APPEND FFAVC_FILES src/platform/android/JDecoderFactory.cpp)
     find_library(LOG_LIB log)
     list(APPEND FFAVC_VENDOR_LIBS ${LOG_LIB})
-
+elseif (WIN32)
+    find_library(Bcrypt_LIB Bcrypt)
+    list(APPEND FFAVC_VENDOR_LIBS ${Bcrypt_LIB})
 endif ()
 
 if (FFAVC_BUILD_STATIC)

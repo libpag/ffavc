@@ -14,8 +14,8 @@ function win_build() {
   make_dir $OUT_DIR/include
   cp -a $SOURCE_DIR/out/win/$1/include/* $OUT_DIR/include
   make_dir $OUT_DIR/win/$1
-  cp -a $SOURCE_DIR/out/win/$1/lib/libavcodec.a $OUT_DIR/win/$1
-  cp -a $SOURCE_DIR/out/win/$1/lib/libavutil.a $OUT_DIR/win/$1
+  cp -a $SOURCE_DIR/out/win/$1/lib/libavcodec.a $OUT_DIR/win/$1/libavcodec.lib
+  cp -a $SOURCE_DIR/out/win/$1/lib/libavutil.a $OUT_DIR/win/$1/libavutil.lib
 }
 
 if [[ $(uname) == 'Darwin' ]]; then
