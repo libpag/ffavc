@@ -80,6 +80,9 @@ if [[ $(uname) == 'Darwin' ]]; then
   cp -r $SOURCE_DIR/out/android/arm/lib/*.a $OUT_DIR/android/arm
   make_dir $OUT_DIR/android/arm64
   cp -r $SOURCE_DIR/out/android/arm64/lib/*.a $OUT_DIR/android/arm64
+  rm -rf $OUT_DIR/include
+  make_dir $OUT_DIR/include
+  cp -r $SOURCE_DIR/out/android/arm64/include/* $OUT_DIR/include/
   make_dir $OUT_DIR/android/x64
   cp -r $SOURCE_DIR/out/android/x86_64/lib/*.a $OUT_DIR/android/x64
 
