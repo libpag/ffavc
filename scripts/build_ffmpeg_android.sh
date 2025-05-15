@@ -49,20 +49,20 @@ rm -rf $OUT_DIR
 # build arm64
 ARCH="arm64"
 CPU="armv8-a"
-CROSS_PREFIX=$TOOLCHAIN/bin/aarch64-linux-android-
+CROSS_PREFIX=$TOOLCHAIN/bin/llvm-
 CC=$TOOLCHAIN/bin/aarch64-linux-android21-clang
 build_arch
 
 # build armv7
 ARCH="arm"
 CPU="armv7-a"
-CROSS_PREFIX=$TOOLCHAIN/bin/arm-linux-androideabi-
+CROSS_PREFIX=$TOOLCHAIN/bin/llvm-
 CC=$TOOLCHAIN/bin/armv7a-linux-androideabi21-clang
 build_arch
 
 # build armv7
 ARCH="x86_64"
 CPU="x86_64"
-CROSS_PREFIX=$TOOLCHAIN/bin/x86_64-linux-android-
+CROSS_PREFIX=$TOOLCHAIN/bin/llvm-
 CC=$TOOLCHAIN/bin/x86_64-linux-android21-clang
 build_arch
