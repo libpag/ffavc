@@ -37,10 +37,10 @@ build_arch
 
 # build armv7
 # compiling armv7 with asm support will cause an 'text-relocation' error during linking.
-OPTIONS="$OPTIONS --disable-asm"
-ARCH="armv7"
-ARCH_DIR="armv7"
-build_arch
+#OPTIONS="$OPTIONS --disable-asm"
+#ARCH="armv7"
+#ARCH_DIR="armv7"
+#build_arch
 
 mkdir -p $OUT_DIR/include
 cp -r $OUT_DIR/arm64/include/. $OUT_DIR/include
