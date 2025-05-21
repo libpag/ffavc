@@ -7,6 +7,14 @@ for h264 decoding.
 
 First, make sure you have built the ffmpeg vendor libraries.
 
+Run the script located in the root directory of the project:
+
+```
+./sync_deps.sh
+```
+
+This script will automatically install the necessary tools and sync all third-party repositories.
+
 ### Windows platform
 
 1.Install Visual Studio 2019.
