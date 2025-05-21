@@ -1,6 +1,6 @@
 {
   "name": "ffavc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A video decoder built on ffmpeg",
   "main": "lib/ffavc.cjs.js",
   "module": "lib/ffavc.esm.js",
@@ -21,7 +21,7 @@
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^11.1.1",
+    "@rollup/plugin-node-resolve": "^11.2.1",
     "@types/emscripten": "^1.39.6",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
     "@typescript-eslint/parser": "^5.9.1",
