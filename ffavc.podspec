@@ -2,7 +2,7 @@ PAG_ROOT = __dir__
 
 Pod::Spec.new do |s|
   s.name     = 'ffavc'
-  s.version  = '1.0.0'
+  s.version  = '1.0.3'
   s.ios.deployment_target   = '9.0'
   s.osx.deployment_target   = '10.13'
   s.summary  = 'ffavc is a video decoder built on ffmpeg which allows libpag to use ffmpeg as its software decoder for h264 decoding.'
