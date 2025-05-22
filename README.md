@@ -3,31 +3,31 @@
 ffavc is a video decoder built on ffmpeg which allows libpag to use ffmpeg as its software decoder
 for h264 decoding.
 
+## Dependency management
+
+Go to the root directory of ffavc project, use the following command to pull the third-party library：
+
+```
+git submodule update --init
+```
+
 ## Build ffmpeg
 
 First, make sure you have built the ffmpeg vendor libraries.
 
-Run the script located in the root directory of the project:
-
-```
-./sync_deps.sh
-```
-
-This script will automatically install the necessary tools and sync all third-party repositories.
-
 ### Windows platform
 
-1.Install Visual Studio 2019.
+1. Install Visual Studio 2019.
 
-2.Install [<font color=blue>mysy2</font>](https://www.msys2.org/)
+2. Install [<font color=blue>mysy2</font>](https://www.msys2.org/)
 
-3.Install some dependencies
+3. Install some dependencies
 
 ```
 pacman -S make gcc diffutils mingw-w64-{i686,x86_64}-pkg-config mingw-w64-i686-nasm mingw-w64-i686-yasm
 ```
 
-4.Rename msys64/usr/bin/link.exe to msys64/usr/bin/link.bak, to avoid conflict with MSVC's link.exe
+4. Rename msys64/usr/bin/link.exe to msys64/usr/bin/link.bak, to avoid conflict with MSVC's link.exe
 
 5. Run "VS2019 x86 Native Tools Command Prompt" (Run "VS2019 x86_x64 Native Tools Command Prompt"
    for 64-bit.)
