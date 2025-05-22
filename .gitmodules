@@ -1,4 +1,8 @@
-[submodule "FFmpeg"]
+[submodule "third_party/ffmepg"]
 	path = third_party/ffmpeg
 	url = https://github.com/FFmpeg/FFmpeg.git
-	branch = e3a61e91030696348b56361bdf80ea358aef4a19
+	branch = release/7.0
+[submodule "third_party/ffmpeg"]
+	path = third_party/ffmpeg
+	url = https://github.com/FFmpeg/FFmpeg.git
+	branch = release/7.0
