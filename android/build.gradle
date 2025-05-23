@@ -4,7 +4,7 @@ buildscript {
         kotlinVersion = '1.6.21'
         supportLibVersion = '28.0.0'
         junitVersion="4.12"
-        agpVersion = '8.0.0'
+        agpVersion = '8.3.1'
         appcompatVersion = '1.4.2' // after this version, compileSdkVersion must large than 31
     }
     repositories {

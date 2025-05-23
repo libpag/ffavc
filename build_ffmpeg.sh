@@ -38,8 +38,8 @@ if [[ $(uname) == 'Darwin' ]]; then
   rm -rf $OUT_DIR/ios
   make_dir $OUT_DIR/include
   cp -r $SOURCE_DIR/out/ios/include/. $OUT_DIR/include
-  make_dir $OUT_DIR/ios/arm
-  cp -r $SOURCE_DIR/out/ios/armv7/lib/*.a $OUT_DIR/ios/arm
+#  make_dir $OUT_DIR/ios/arm
+#  cp -r $SOURCE_DIR/out/ios/armv7/lib/*.a $OUT_DIR/ios/arm
   make_dir $OUT_DIR/ios/arm64
   cp -r $SOURCE_DIR/out/ios/arm64/lib/*.a $OUT_DIR/ios/arm64
   make_dir $OUT_DIR/ios/x64
@@ -59,8 +59,10 @@ if [[ $(uname) == 'Darwin' ]]; then
   APPLE_DIR=$OUT_DIR/apple
   rm -rf $APPLE_DIR
   make_dir $APPLE_DIR/ios
-  lipo -create $OUT_DIR/ios/arm64/libavcodec.a $OUT_DIR/ios/arm/libavcodec.a -o $APPLE_DIR/ios/libavcodec.a
-  lipo -create $OUT_DIR/ios/arm64/libavutil.a $OUT_DIR/ios/arm/libavutil.a -o $APPLE_DIR/ios/libavutil.a
+#  lipo -create $OUT_DIR/ios/arm64/libavcodec.a $OUT_DIR/ios/arm/libavcodec.a -o $APPLE_DIR/ios/libavcodec.a
+#  lipo -create $OUT_DIR/ios/arm64/libavutil.a $OUT_DIR/ios/arm/libavutil.a -o $APPLE_DIR/ios/libavutil.a
+  lipo -create $OUT_DIR/ios/arm64/libavcodec.a -o $APPLE_DIR/ios/libavcodec.a
+  lipo -create $OUT_DIR/ios/arm64/libavutil.a -o $APPLE_DIR/ios/libavutil.a
   mkdir -p $APPLE_DIR/simulator
   lipo -create $OUT_DIR/ios/x64/libavcodec.a $OUT_DIR/ios/arm64-simulator/libavcodec.a -o $APPLE_DIR/simulator/libavcodec.a
   lipo -create $OUT_DIR/ios/x64/libavutil.a $OUT_DIR/ios/arm64-simulator/libavutil.a -o $APPLE_DIR/simulator/libavutil.a

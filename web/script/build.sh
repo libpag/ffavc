@@ -40,7 +40,6 @@ emcc $RELEASE_CONF -std=c++17 \
   -s NO_EXIT_RUNTIME=1 \
   -s ENVIRONMENT="web" \
   -s EXPORT_ES6=1 \
-  -s USE_ES6_IMPORT_META=0 \
   -o ../src/wasm/ffavc.js
 
 if [ ! -d "../lib" ]; then

@@ -6,7 +6,7 @@ android {
     buildToolsVersion '33.0.2'
     defaultConfig {
         applicationId "org.libpag.pagviewer"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
