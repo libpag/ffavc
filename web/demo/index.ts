@@ -18,11 +18,8 @@ window.onload = async () => {
   const buffer = await fetch('./particle_video.pag').then((response) => response.arrayBuffer());
   const pagFile = await PAG.PAGFile.load(buffer);
 
-  const canvas = document.createElement('canvas');
-  canvas.width = 375;
-  canvas.height = 667;
-  document.getElementById('box')?.appendChild(canvas);
+  const pagCanvas = document.getElementById('pag') as HTMLCanvasElement;
 
-  let pagView = await PAG.PAGView.init(pagFile, canvas);
+  let pagView = await PAG.PAGView.init(pagFile, pagCanvas);
   await pagView?.play();
 };

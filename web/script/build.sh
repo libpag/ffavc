@@ -14,7 +14,7 @@ RELEASE_CONF="-Oz -s"
 CMAKE_BUILD_TYPE=Relese
 if [[ $@ == *debug* ]]; then
   CMAKE_BUILD_TYPE=Debug
-  RELEASE_CONF="-O0 -g3"
+  RELEASE_CONF="-O0 -gsource-map -sSAFE_HEAP=1 -Wno-limited-postlink-optimizations"
   BUILD_TS=""
 fi
 
@@ -30,7 +30,7 @@ emcc $RELEASE_CONF -std=c++17 \
   $BUILD_DIR/libffavc.a \
   ../src/ffavc_wasm_bindings.cpp \
   --no-entry \
-  --bind \
+  -lembind \
   -s WASM=1 \
   -s ALLOW_MEMORY_GROWTH=1 \
   -s MEMORY_GROWTH_GEOMETRIC_STEP=0.25 \
@@ -40,6 +40,7 @@ emcc $RELEASE_CONF -std=c++17 \
   -s NO_EXIT_RUNTIME=1 \
   -s ENVIRONMENT="web" \
   -s EXPORT_ES6=1 \
+  -s EXPORTED_FUNCTIONS=['_malloc','_free'] \
   -o ../src/wasm/ffavc.js
 
 if [ ! -d "../lib" ]; then
